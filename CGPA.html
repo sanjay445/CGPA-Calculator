@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CGPA Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" style="background-color:rgba(201, 76, 76, 0.3)">
+  <h2>CGPA CALCULATOR</h2>
+  <form class="was-validated">
+    <div class="form-group">
+      <label for="mark1">Subject1:</label>
+      <input type="text" class="form-control" id="mark1" placeholder="Enter mark" name="mark1" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="mark2">Subject2:</label>
+      <input type="text" class="form-control" id="mark2" placeholder="Enter mark" name="mark2" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    
+    <div class="form-group">
+        <label for="mark3">Subject3:</label>
+        <input type="text" class="form-control" id="mark3" placeholder="Enter mark" name="mark3" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+
+    <div class="form-group">
+        <label for="mark4">Subject4:</label>
+        <input type="text" class="form-control" id="mark4" placeholder="Enter mark" name="mark4" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="mark5">Subject5:</label>
+        <input type="text" class="form-control" id="mark5" placeholder="Enter mark" name="mark5" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="mark6">Subject6:</label>
+        <input type="text" class="form-control" id="mark6" placeholder="Enter mark" name="mark6" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+
+        <button type="submit" id="btn1" class="btn btn-primary">Sem1</button>
+        <button type="submit" id="btn2" class="btn btn-primary">Sem2</button>
+		<button type="submit" id="btn3" class="btn btn-primary">Sem3</button>
+		<button type="submit" id="btn4" class="btn btn-primary">Sem4</button>
+		<button type="submit" id="btn5" class="btn btn-primary">Sem5</button>
+		<button type="submit" id="btn6" class="btn btn-primary">Sem6</button>
+		<button type="submit" id="btn7" class="btn btn-primary">Sem7</button>
+		<button type="submit" id="btn8" class="btn btn-primary">Sem8</button>
+
+  </form>
+  <div>
+      <br>
+  <button type="submit" id="btn9" class="btn btn-primary">Generate CGPA</button>
+  </div>
+
+  <div>
+      <br>
+      <h4 id="cpa1"></h4><p id="p1"></p><br>
+      <h4 id="cpa2"></h4><p id="p2"></p><br>
+	  <h4 id="cpa3"></h4><p id="p3"></p><br>
+      <h4 id="cpa4"></h4><p id="p4"></p><br>
+	  <h4 id="cpa5"></h4><p id="p5"></p><br>
+      <h4 id="cpa6"></h4><p id="p6"></p><br>
+	  <h4 id="cpa7"></h4><p id="p7"></p><br>
+      <h4 id="cpa8"></h4><p id="p8"></p><br>
+      <h4 id="cgpa"></h4><p id="p9"></p><br>
+  </div>
+</div>
+
+
+<script>
+    var m1=document.getElementById('mark1');
+    var m2=document.getElementById('mark2');
+    var m3=document.getElementById('mark3');
+    var m4=document.getElementById('mark4');
+    var m5=document.getElementById('mark5');
+    var m6=document.getElementById('mark6');
+    var avg1=0,avg2=0,avg3=0,avg4=0,avg5=0,avg6=0,avg7=0,avg8=0,avg;
+
+    document.getElementById("btn1").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+        avg1 = total/60;
+        document.getElementById('cpa1').innerHTML = "Sem1 cpa :";
+        document.getElementById('p1').innerHTML = avg1;
+        m1.value="";m2.value="";m3.value="";m4.value="";m5.value="";m6.value="";
+    });
+	
+	 document.getElementById("btn2").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+        avg2 = total/60;
+        document.getElementById('cpa2').innerHTML = "Sem2 cpa :";
+        document.getElementById('p2').innerHTML = avg2;
+        m1.value="";m2.value="";m3.value="";m4.value="";m5.value="";m6.value="";
+    });
+	 document.getElementById("btn3").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+        avg3 = total/60;
+        document.getElementById('cpa3').innerHTML = "Sem3 cpa :";
+        document.getElementById('p3').innerHTML = avg3;
+        m1.value="";m2.value="";m3.value="";m4.value="";m5.value="";m6.value="";
+    });
+	
+	 document.getElementById("btn4").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+        avg4 = total/60;
+        document.getElementById('cpa4').innerHTML = "Sem4 cpa :";
+        document.getElementById('p4').innerHTML = avg4;
+        m1.value="";m2.value="";m3.value="";m4.value="";m5.value="";m6.value="";
+    });
+
+	 document.getElementById("btn5").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+        avg5 = total/60;
+        document.getElementById('cpa5').innerHTML = "Sem5 cpa :";
+        document.getElementById('p5').innerHTML = avg5;
+        m1.value="";m2.value="";m3.value="";m4.value="";m5.value="";m6.value="";
+    });
+	
+	 document.getElementById("btn6").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+        avg6 = total/60;
+        document.getElementById('cpa6').innerHTML = "Sem6 cpa :";
+        document.getElementById('p6').innerHTML = avg6;
+        m1.value="";m2.value="";m3.value="";m4.value="";m5.value="";m6.value="";
+    });
+
+	 document.getElementById("btn7").addEventListener('click' ,(e) =>{
+			e.preventDefault();
+			var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+			avg7 = total/60;
+			document.getElementById('cpa7').innerHTML = "Sem7 cpa :";
+			document.getElementById('p7').innerHTML = avg7;
+			m1.value="";m2.value="";m3.value="";m4.value="";m5.value="";m6.value="";
+		});
+
+    document.getElementById("btn8").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        var total = parseFloat(m1.value) + parseFloat(m2.value) + parseFloat(m3.value) + parseFloat(m4.value) + parseFloat(m5.value) + parseFloat(m6.value);
+        avg8 = total/60;
+        document.getElementById('cpa8').innerHTML = "Sem8 cpa :" ;
+        document.getElementById('p8').innerHTML = avg8; 
+    });
+
+    document.getElementById("btn3").addEventListener('click' ,(e) =>{
+        e.preventDefault();
+        avg = (avg1 + avg2 + avg3 + avg4 + avg5 + avg6 + avg7 + avg8 )/8;
+        document.getElementById('cgpa').innerHTML = "CGPA :" ;
+        document.getElementById('p9').innerHTML = avg;  
+    });
+</script>
+</body>
+</html>
